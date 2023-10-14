@@ -64,6 +64,6 @@ const Welcome = () => {
       </View>
     </View>
   );
-};
+}; 
 
 export default Welcome;

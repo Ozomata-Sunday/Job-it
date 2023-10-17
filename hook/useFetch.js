@@ -7,8 +7,6 @@ const useFetch = (endpoint, query) => {
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState(null)
 
-    const axios = require('axios');
-
     const options = {
         method: 'GET',
         url: `https://jsearch.p.rapidapi.com/${endpoint}`,
@@ -23,7 +21,7 @@ const useFetch = (endpoint, query) => {
     };
 
     const fetchdata = async () => {
-        setIsLoading(true)
+        setIsLoading(true);
 
         try {
             const response = await axios.request
@@ -36,7 +34,7 @@ const useFetch = (endpoint, query) => {
         } finally {
             setIsLoading(false)
         }
-    }
+    };
 
     useEffect(() => {
         fetchdata();
